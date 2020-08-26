@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+.contenedor {
+	background: #000;
+	width: 100%;
+	margin: 40px;
+	/*margin: 40px auto;*/
+	max-width: 90%;
+}
+
+.contenedor .reproductor {
+	position: relative;
+}
+
+.contenedor .video {
+	width: 100%;
+	vertical-align: top;
+	z-index: 90;
+}
+
+.contenedor .reproductor:hover .controles {
+	opacity: 1;
+}
+
+.contenedor .controles {
+	opacity: 0;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+/* Estilos para el Slider */
+/* ----- ----- ----- ----- ----- ----- -----  */
+
+.reproductor input[type="range"]{
+	background: transparent; /*Le ponemos un fondo transparente*/
+	-webkit-appearance:none; /*Ocultamos el slider*/
+}
+
+.reproductor input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+.reproductor input[type=range]:focus {
+	outline: none; 
+	/* Ocultamos el borde azul que agregan algunos nevegadores */
+}
+
+.reproductor input[type=range]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	/* Ocultamos todos los estilos para poder darle los nuestros */
+	background: transparent; 
+	border-color: transparent;
+	color: transparent;
+}
+
+/* Dando estilos al Thumb */
+.reproductor input[type=range]::-moz-range-thumb {
+	background: rgba(0,0,0,.5);
+	width: 8px;
+	height: 8px;
+	cursor: pointer;
+	border: none;
+	border: 2px solid #ccc;
+	border-radius:100%;
+}
+
+.reproductor input[type=range]::-moz-range-thumb:hover {
+	background: #ccc;
+}
+
+.reproductor input[type=range]::-moz-range-thumb:active {
+	background: #424242;
+} 
+
+/* Estilos para Chrome */
+.reproductor input[type=range]::-webkit-slider-thumb {
+	background: rgba(0,0,0,.5);
+	width: 8px;
+	height: 8px;
+	cursor: pointer;
+	border: none;
+	border: 2px solid #ccc;
+	border-radius:100%;
+}
+
+.reproductor input[type=range]::-webkit-slider-thumb:hover {
+	background: #ccc;
+}
+
+.reproductor input[type=range]::-webkit-slider-thumb:active {
+	background: #424242;
+}
+
+/*Estilos para Internet Explorer*/
+
+.reproductor input[type=range]::-ms-thumb {
+	background: rgba(0,0,0,.5);
+	width: 8px;
+	height: 8px;
+	cursor: pointer;
+	border: none;
+	border: 2px solid #ccc;
+	border-radius:100%;
+}
+
+/* Dando estilos al Track */
+.reproductor input[type=range]::-moz-range-track {
+	width: 100%;
+	background: rgba(0,0,0,.5);
+	height: 12px;
+}
+
+.reproductor input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	background: rgba(0,0,0,.5);
+	height: 12px;
+}
+
+.reproductor input[type=range]::-ms-track {
+	width: 100%;
+	background: rgba(0,0,0,.5);
+	height: 12px;
+}
+
+/* ----- ----- ----- ----- ----- ----- -----  */
+
+.contenedor .tiempo {
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	bottom: -3px;
+	background: #000;
+}
+
+.contenedor .btn {
+	position: absolute;
+}
+
+.contenedor .btn.play {
+	bottom: 25px;
+	left: 20px;
+	background: rgba(0,0,0,.5);
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.contenedor .btn .fa {
+	color: #fff;
+	position: relative;
+	left: 1px;
+}
+
+.contenedor .btn.play:hover {
+	background: rgba(0,0,0,.8);
+}
+
+.contenedor .volumen{
+	position: absolute;
+	width: 100px;
+	bottom: 25px;
+	right: 20px;
+}
+
+.gafer{
+	width: 300px;
+}
+
+.ir-arriba {
+	padding:20px;
+	display:inline-block;
+	background:#024959;
+	color:#fff;
+	position: fixed;
+	font-size:20px;
+	bottom:20px;
+	right:20px;
+	display:none;
+	cursor:pointer;
+}
